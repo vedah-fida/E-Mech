@@ -1,0 +1,57 @@
+{% load static %}
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E Mech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <meta charset="UTF-8">
+    <style>
+	  #main-row{
+	  	padding-top: 12em;
+	  }
+	  #textview{
+	  	padding-right: 7em;
+	  }
+	  #form{
+	  	padding-top: 1em;
+
+	  }
+	  #body{
+	  	background-image: url("static/images/bg3.jpg");
+	  }
+	  : :placeholder {
+	        color :teal;
+	        opacity:1;
+	  }
+
+
+
+    </style>
+</head>
+
+<body id="body">
+<div class="container">
+    <div class="row" id="main-row">
+        <div class="col l8" id="textview">
+            <div class="card-panel">
+                <h4>E Mech</h4>
+                <h5>Backend Administration</h5>
+
+            </div>
+        </div>
+        <div class="col l4" id="form">
+            <form method="post" action="{% url 'login:login_user' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form }}
+                <button class="waves-effect waves-light btn" type="submit" name="login">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+</body>
+</html>

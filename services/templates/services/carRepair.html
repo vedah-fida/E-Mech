@@ -1,0 +1,192 @@
+{% extends "services/landing.html" %}
+{% block page_title  %} {{ page_name }} {% endblock %}
+
+{% block data_section %}
+<div class="w3-row-padding">
+    <div class="w3-third">
+        <h2>Services</h2>
+    </div>
+
+    <div class="w3-third" id="search-input">
+        <form class="w3-container" action="#" method="get">
+            <input class="w3-input w3-border" name="mechsearch" type="text" placeholder="Find a Service">
+
+    </div>
+    <div class="w3-third" id="search-btn">
+        <button class="w3-btn w3-teal">Search</button>
+        </form>
+    </div>
+
+
+    <div class="w3-row">
+        <a href="javascript:void(0)" onclick="openTab(event, 'New');">
+            <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">New</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openTab(event, 'Complete');">
+            <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">Complete</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openTab(event, 'Ongoing');">
+            <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">Ongoing</div>
+        </a>
+
+        <a href="javascript:void(0)" onclick="openTab(event, 'Onhold');">
+            <div class="w3-quarter tablink w3-bottombar w3-hover-light-grey w3-padding">Onhold</div>
+        </a>
+    </div>
+
+    <div id="New" class="w3-container task" style="display:none">
+        <table class="w3-table w3-stripped w3-bordered w3-hoverable">
+            <tr class="w3-green">
+                <th>Customer Name</th>
+                <th>Mechanic Name</th>
+                <th>Garage Location</th>
+                <th>Amount Charged</th>
+                <th>Status</th>
+
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="Complete" class="w3-container task" style="display:none">
+        <table class="w3-table w3-stripped w3-bordered w3-hoverable">
+            <tr class="w3-green">
+                <th>Customer Name</th>
+                <th>Mechanic Name</th>
+                <th>Garage Location</th>
+                <th>Amount Charged</th>
+                <th>Status</th>
+
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+        </table>
+    </div>
+
+    <div id="Ongoing" class="w3-container task" style="display:none">
+        <table class="w3-table w3-stripped w3-bordered w3-hoverable">
+            <tr class="w3-green">
+                <th>Customer Name</th>
+                <th>Mechanic Name</th>
+                <th>Garage Location</th>
+                <th>Amount Charged</th>
+                <th>Status</th>
+
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+        </table>
+    </div>
+    <div id="Onhold" class="w3-container task" style="display:none">
+        <table class="w3-table w3-stripped w3-bordered w3-hoverable">
+            <tr class="w3-green">
+                <th>Customer Name</th>
+                <th>Mechanic Name</th>
+                <th>Garage Location</th>
+                <th>Amount Charged</th>
+                <th>Status</th>
+
+            </tr>
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+
+            <tr>
+                <td>John Doe</td>
+                <td>Doe John</td>
+                <td>Ngara</td>
+                <td>15,000</td>
+                <td>Complete Icon</td>
+
+            </tr>
+        </table>
+    </div>
+</div>
+
+{% endblock data_section %}

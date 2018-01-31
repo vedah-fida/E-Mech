@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> {% block page_title %} {{ page_name }} {% endblock page_title %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/w3css.css' %}">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+{% block body %}
+<div class="w3-row">
+    <div class="w3-sidebar w3-teal w3-bar-block w3-card">
+        <!-- sidebar to the right-->
+        <h5 id="main-heading">Hello User</h5>
+        <div class="w3-container" id="sidebar-sub-items">
+
+            <!-- Services accordion-->
+            <div class="w3-bar-item" onclick="accFunc2()">
+                Services <i class="fa fa-caret-down"></i>
+            </div>
+            <div id="accSidebar2" class="w3-hide w3-white">
+                <a href="{% url 'services:car-repair' %}" class="w3-bar-item w3-button">Car Repairs</a>
+                <a href="{% url 'services:tow-truck' %}" class="w3-bar-item w3-button">Towing</a>
+                <a href="{% url 'services:medical-help' %}" class="w3-bar-item w3-button">Medical Services</a>
+                <a href="#" class="w3-bar-item w3-button">Reported Accidents</a>
+                <a href="#" class="w3-bar-item w3-button">Hire a Driver</a>
+
+            </div>
+
+            <!-- Mechanics accordion-->
+            <div class="w3-bar-item" onclick="accFunc()">
+                Mechanics <i class="fa fa-caret-down"></i>
+            </div>
+            <div id="accSidebar" class="w3-hide w3-white w3-card-4">
+                <a href="{% url 'mechanics:all_mechanics' %}" class="w3-bar-item w3-button">All Mechanics</a>
+                <a href="#" class="w3-bar-item w3-button">Add New</a>
+            </div>
+
+            <!-- Garage accordion-->
+            <div class="w3-bar-item" onclick="accFunc1()">
+                Garage <i class="fa fa-caret-down"></i>
+            </div>
+            <div id="accSidebar1" class="w3-hide w3-white w3-card-4">
+                <a href="#" class="w3-bar-item w3-button">All Garages</a>
+                <a href="#" class="w3-bar-item w3-button">Add New </a>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- -->
+    <div class="w3-container" id="maincontent">
+        <!-- body with content from selected menu item-->
+        <div class="w3-bar w3-indigo w3-large" id="topbar">
+            <a href="#" class="w3-bar-item">Home</a>
+            <a href="#" class="w3-bar-item w3-display-topmiddle">Top Navigation</a>
+            <a href="{% url 'login:logout_user' %}" class="w3-bar-item w3-display-topright">Logout</a>
+        </div>
+        {% block data_section %}
+
+        {% endblock data_section %}
+    </div>
+    <!-- -->
+
+</div>
+
+
+<script src=" {% static 'js/script.js' %}"></script>
+{% endblock body%}
+</body>
+</html>

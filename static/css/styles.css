@@ -1,0 +1,28 @@
+#main-heading{
+		text-align: left;
+	}
+
+#sidebar-sub-items{
+		line-height: 45px;
+	}
+
+.fa-caret-down{
+		padding-left: 8px;
+	}
+
+#accSidebar, #accSidebar1, #accSidebar2{
+		font-size: 12px;
+		line-height: 15px;
+	}
+
+#maincontent{
+		margin-left: 14%;
+		
+		
+	}
+#mech-search{
+	width: 223px;
+}
+#search-btn, #search-input{
+	padding-top: 12px;
+
