@@ -1,7 +1,7 @@
-from django.conf.urls import url, include
-from django.contrib import admin
-from .views import MechanicCRUDView
-
+from django.conf.urls import url
+from .views import *
+app_name = "api"
 urlpatterns = [
-    url(r'^(?P<id>d+)/', MechanicCRUDView.as_view(), name="mechanic-crud"),
+    url(r'', test_view, name="test_view"),
+
 ]

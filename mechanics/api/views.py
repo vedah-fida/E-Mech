@@ -1,11 +1,7 @@
-from mechanics.models import Mechanics
-from rest_framework import generics
+from django.shortcuts import render, get_object_or_404, reverse
+from django.http import HttpResponse
 
 
-class MechanicCRUDView(generics.RetrieveUpdateDestroyAPIView):
-    lookup_field = "pk"
-    queryset = Mechanics.objects.all()
-
-    def get_queryset(self):
-        pk = self.kwargs.get("pk")
-        return Mechanics.objects.get(pk)
+def test_view(request):
+    view_name = "<h2>I am a view</h2>"
+    return HttpResponse(view_name)

@@ -1,6 +1,7 @@
 from django.db import models
 from services.models import Services
 
+
 # Create your models here.
 # mechanics table
 class Mechanics(models.Model):
@@ -11,6 +12,7 @@ class Mechanics(models.Model):
     password = models.CharField(max_length=25)
     service_name = models.ForeignKey(Services,
                                      on_delete=models.CASCADE)  # The services model has been imported from the
+
     # app Services models
 
     def __str__(self):

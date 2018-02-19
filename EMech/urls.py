@@ -19,7 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('login.urls')),
-    url(r'^mechanics/api', include('mechanics.api.urls')),
-    url(r'^services/', include('services.urls')),
     url(r'^mechanics/', include('mechanics.urls')),
+    url(r'^services/', include('services.urls')),
+
+    url(r'^api/mechanics/', include('mechanics.api.urls'), name="mechanics-api"),
 ]
