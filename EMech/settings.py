@@ -24,7 +24,9 @@ SECRET_KEY = ')frx$^d$rzif%$0fs)1a!ywwz_w=l*k!ptmwb=ushq$o=3gcce'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'e-mech.herokuapp.com'
+]
 
 # Application definition
 
