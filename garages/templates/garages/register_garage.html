@@ -1,0 +1,11 @@
+{% extends "services/landing.html" %}
+{% block page_title  %} {{ page_name }} {% endblock %}
+
+{% block data_section %}
+<form method= "post" action="{% url 'garages:register_garage' %}">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Register">
+</form>
+{% endblock data_section %}
+

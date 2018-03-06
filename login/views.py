@@ -22,6 +22,8 @@ def login_user(request):
             return HttpResponseRedirect(reverse("services:services-landing"))
         else:
             return HttpResponseRedirect(reverse("login:login_user"))
+    else:
+        form = UserLoginForm()
 
     return render(request, "login/login.html", {"form": form})
 

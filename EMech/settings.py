@@ -25,7 +25,8 @@ SECRET_KEY = ')frx$^d$rzif%$0fs)1a!ywwz_w=l*k!ptmwb=ushq$o=3gcce'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'e-mech.herokuapp.com'
+    'e-mech.herokuapp.com',
+    '127.0.0.1'
 ]
 
 # Application definition
@@ -34,6 +35,7 @@ INSTALLED_APPS = [
     'login',
     'services',
     'mechanics',
+    'garages',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
