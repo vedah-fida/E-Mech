@@ -5,24 +5,56 @@
     <meta charset="UTF-8">
     <title> {% block page_title %} {{ page_name }} {% endblock page_title %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--import materialize cdn
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+-->
+
+    <!--Import materialize from static -->
+    <link type="text/css" rel="stylesheet" href="{% static 'materialize/css/materialize.min.css' %}"  media="screen,projection"/>
+
+
     <link rel="stylesheet" href="{% static 'css/w3css.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
 </head>
 <body>
 {% block body %}
 <div class="w3-row">
     <div class="w3-sidebar w3-teal w3-bar-block w3-card">
         <!-- sidebar to the right-->
-        <h5 id="main-heading">Hello User</h5>
+        <div class="w3-card-4 w3-blue-grey" style="width:100%;">
+            <div class="w3-row-padding">
+                <div class="w3-col s12">
+                    <img src="{% static 'images/img_avatar3.png' %}" class=" w3-left w3-circle w3-margin-right" style="width:60px">
+                </div>
+                <div class="w3-col s12">
+                    <div>
+                    <p>Welcome Ken </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
         <div class="w3-container" id="sidebar-sub-items">
 
             <!-- Services accordion-->
-            <div class="w3-bar-item" onclick="accFunc2()">
-                Services <i class="fa fa-caret-down"></i>
+            <div class="w3-bar-item " onclick="accFunc2()">
+                <div class="w3-row">
+                    <div class="w3-col s8">
+                      Services
+                    </div>
+                    <div class="w3-col s4">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+
             </div>
-            <div id="accSidebar2" class="w3-hide w3-white">
+            <div id="accSidebar2" class="w3-hide w3-blue-grey">
                 <a href="{% url 'services:car-repair' %}" class="w3-bar-item w3-button">Car Repairs</a>
                 <a href="{% url 'services:tow-truck' %}" class="w3-bar-item w3-button">Towing</a>
                 <a href="{% url 'services:medical-help' %}" class="w3-bar-item w3-button">Medical Services</a>
@@ -33,18 +65,33 @@
 
             <!-- Mechanics accordion-->
             <div class="w3-bar-item" onclick="accFunc()">
-                Mechanics <i class="fa fa-caret-down"></i>
+                <div class="w3-row">
+                    <div class="w3-col s8">
+                      Mechanics
+                    </div>
+                    <div class="w3-col s4">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
+
             </div>
-            <div id="accSidebar" class="w3-hide w3-white w3-card-4">
+            <div id="accSidebar" class="w3-hide w3-blue-grey w3-card-4">
                 <a href="{% url 'mechanics:all_mechanics' %}" class="w3-bar-item w3-button">All Mechanics</a>
                 <a href="#" class="w3-bar-item w3-button">Add New</a>
             </div>
 
             <!-- Garage accordion-->
             <div class="w3-bar-item" onclick="accFunc1()">
-                Garage <i class="fa fa-caret-down"></i>
+                <div class="w3-row">
+                    <div class="w3-col s8">
+                      Garage
+                    </div>
+                    <div class="w3-col s4">
+                        <i class="fa fa-caret-down"></i>
+                    </div>
+                </div>
             </div>
-            <div id="accSidebar1" class="w3-hide w3-white w3-card-4">
+            <div id="accSidebar1" class="w3-hide w3-blue-grey w3-card-4">
                 <a href="#" class="w3-bar-item w3-button">All Garages</a>
                 <a href="{% url 'garages:register_garage'%}" class="w3-bar-item w3-button">Add New </a>
                 <a href="#" class="w3-bar-item w3-button">Edit</a>
@@ -71,6 +118,10 @@
 
 
 <script src=" {% static 'js/script.js' %}"></script>
+<script src=" {% static 'js/script.js' %}"></script>
+  <!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src=" {% static 'materialize/js/materialize.min.js'%}"></script>
 {% endblock body%}
 </body>
 </html>

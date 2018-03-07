@@ -1,11 +1,41 @@
 {% extends "services/landing.html" %}
+
 {% block page_title  %} {{ page_name }} {% endblock %}
 
 {% block data_section %}
-<form method= "post" action="{% url 'garages:register_garage' %}">
-    {% csrf_token %}
-    {{ form }}
-    <input type="submit" value="Register">
-</form>
+     <div class="row">
+   <form class="col s12">
+     <div class="row">
+       <div class="input-field col s12">
+         <input id="garage_name" type="text" class="validate">
+         <label for="garage_name" data-error="text only">Garage Name</label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <input type="text" name="garage_location" id="garage_location" class="validate">
+         <label for="garage_name">Garage Location</label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <input type="email" name="garage_email" value="" class="validate">
+         <label for="garage_email" data-error="invalid email">Garage Email Address</label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s12">
+         <input type="number" name="garage_telephone" value="" class="validate">
+         <label for="garage_telephone">Garage Telephone Number</label>
+       </div>
+     </div>
+     <div class="row">
+       <div class="input-field col s6">
+         <input type="submit" name="register_garage" value="Register Garage" class="waves-effect waves-light btn">
+       </div>
+
+     </div>
+   </form>
+ </div>
 {% endblock data_section %}
 
