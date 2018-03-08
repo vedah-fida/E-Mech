@@ -10,8 +10,8 @@ class Mechanics(models.Model):
     username = models.CharField(max_length=25)
     email = models.EmailField(max_length=254)
     password = models.CharField(max_length=25)
-    service_name = models.ForeignKey(Services,
-                                     on_delete=models.CASCADE)  # The services model has been imported from the
+
+    #service_name = models.ForeignKey(Services,on_delete=models.CASCADE)  # The services model has been imported from the
 
     # app Services models
 
