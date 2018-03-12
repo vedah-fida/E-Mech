@@ -1,0 +1,30 @@
+{% extends "services/landing.html" %}
+
+{% block page_title  %} {{ page_name }} {% endblock %}
+
+{% block data_section %}
+<div class="row">
+    <table class=" w3-table w3-bordered w3-hoverable">
+        <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Username</th>
+            <th>Email</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for field in all_mechanics %}
+        <tr>
+            <td> {{ field.first_name }}</td>
+            <td> {{ field.last_name }}</td>
+            <td> {{ field.username }}</td>
+            <td> {{ field.email }}</td>
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+{% endblock data_section %}
+

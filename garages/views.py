@@ -5,6 +5,9 @@ from .models import RegisterGarage
 # Create your views here.
 from django import forms
 
+def all_garages(request):
+    all_garages = RegisterGarage.objects.all()
+    return render(request, 'garages/all_garages.html', {"all_garages" : all_garages})
 
 def register_garage(request):
     if request.method == 'POST':

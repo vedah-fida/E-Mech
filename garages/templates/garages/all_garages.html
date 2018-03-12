@@ -1,0 +1,31 @@
+{% extends "services/landing.html" %}
+
+{% block page_title  %} {{ page_name }} {% endblock %}
+
+{% block data_section %}
+<div class="row">
+    <table class=" w3-table w3-bordered w3-hoverable">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Email</th>
+            <th>Telephone</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for field in all_garages %}
+        <tr>
+            <td> {{ field.garage_name }}</td>
+            <td> {{ field.garage_location }}</td>
+            <td> {{ field.garage_email }}</td>
+            <td> {{ field.garage_telephone }}</td>
+
+        </tr>
+        {% endfor %}
+
+        </tbody>
+    </table>
+</div>
+{% endblock data_section %}
+

@@ -10,8 +10,8 @@ from django import forms
 
 @login_required(login_url='login:login_user')
 def all_mechanics(request):
-    all_mechanics = "<h3>The listing for all the mechanics</h3>"
-    return HttpResponse(all_mechanics)
+    all_mechanics = Mechanics.objects.all()
+    return render(request, 'mechanics/all_mechanics.html', {"all_mechanics": all_mechanics})
 
 
 def register_mechanic(request):
@@ -25,18 +25,6 @@ def register_mechanic(request):
 
     return render(request, 'mechanics/register_mechanic.html', {'form': form})
 
-"""
-def mechanic_details(request, pk):
-
-    #form = UpdateMechanicForm()
-    try:
-        mechanic = Mechanics.objects.get(pk=pk)
-        form = UpdateMechanicForm(request.POST, instance=mechanic)
-
-    except Mechanics.DoesNotExist:
-        return HttpResponse("Object not found")
-    return render(request, 'mechanics/get_mechanic.html', {'mechanic': mechanic, 'form': form})
-"""
 
 def mechanic_details(request, pk):
     mechanic_instance = get_object_or_404(Mechanics, pk=pk)

@@ -1,6 +1,6 @@
 from django.conf.urls import url
 from .views import *
-app_name = "api"
+app_name = "mechanics-api"
 urlpatterns = [
    # url(r'', MechanicListAPIView.as_view(), name="mechanic-list-api-view"),
 

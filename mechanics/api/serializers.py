@@ -8,5 +8,4 @@ class MechanicSerializer(ModelSerializer):
             'first_name',
             'last_name',
             'email',
-            'service_name',
         )

@@ -23,5 +23,6 @@ urlpatterns = [
     url(r'^services/', include('services.urls')),
     url(r'^garages/', include('garages.urls')),
 
-    url(r'^api/', include('mechanics.api.urls'), name="mechanics-api"),
+    url(r'^mechanics-api/', include('mechanics.api.urls'), name="mechanics-api"),
+    url(r'^garages-api/', include('garages.api.urls'), name="garages-api"),
 ]
