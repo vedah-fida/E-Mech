@@ -26,3 +26,9 @@ class RegisterMechanicForm(forms.ModelForm):
             return username
         raise forms.ValidationError("Username taken, please try another one")
 
+class UpdateMechanicForm(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    class Meta:
+        model = Mechanics
+        fields = '__all__'
+

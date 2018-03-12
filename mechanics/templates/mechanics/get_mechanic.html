@@ -1,0 +1,23 @@
+{% extends "services/landing.html" %}
+
+{% block page_title  %} {{ page_name }} {% endblock %}
+
+{% block data_section %}
+
+     <div class="row">
+  <form class="col s12" method="post" action="{% url 'mechanics:mechanic_details' mechanic_instance.pk %}">
+       {% csrf_token %}
+      <label>First Name</label>
+      <input type="text" value="{{ mechanic_instance.first_name }}" name="first_name">
+      <label>Last Name</label>
+      <input type="text" value="{{ mechanic_instance.last_name }}">
+      <label>Username</label>
+      <input type="text" value="{{ mechanic_instance.username }}">
+      <label>Email</label>
+      <input type="text" value="{{ mechanic_instance.email }}">
+      <input type="submit" name="register_garage" value="Update Mechanic" class="waves-effect waves-light btn">
+   </form>
+
+ </div>
+{% endblock data_section %}
+

@@ -4,10 +4,15 @@
 
 {% block data_section %}
      <div class="row">
-   <form class="col s12" method="post" action="{% url 'mechanics:register_mechanic' %}">
+   <form class="col s12" method="post" action="">
        {% csrf_token %}
        {{ form }}
+       {% if mechanic_instance %}
+         <input type="submit" name="register_garage" value="Update Mechanic" class="waves-effect waves-light btn">
+       {% else %}
          <input type="submit" name="register_garage" value="Register Mechanic" class="waves-effect waves-light btn">
+
+       {% endif %}
    </form>
 
  </div>

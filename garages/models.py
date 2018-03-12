@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
+from django.shortcuts import reverse
 
 # Create your models here.
 class RegisterGarage(models.Model):
@@ -17,3 +17,7 @@ class RegisterGarage(models.Model):
 
     def __str__(self):
         return self.garage_name
+
+    def get_absolute_url(self):
+        return reverse("garages:register_garage")
+

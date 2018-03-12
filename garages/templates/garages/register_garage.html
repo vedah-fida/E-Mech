@@ -3,13 +3,18 @@
 {% block page_title  %} {{ page_name }} {% endblock %}
 
 {% block data_section %}
-     <div class="row">
-   <form class="col s12" method="post" action="{% url 'garages:register_garage' %}">
-       {% csrf_token %}
-       {{ form }}
-         <input type="submit" name="register_garage" value="Register Garage" class="waves-effect waves-light btn">
-   </form>
+<div class="row">
+    <form class="col s12" method="post" action="">
+        {% csrf_token %}
+        {{ form }}
+        {% if garage_instance %}
+        <input type="submit" name="register_garage" value="Update Garage" class="waves-effect waves-light btn">
+        {% else %}
+        <input type="submit" name="register_garage" value="Register Garage" class="waves-effect waves-light btn">
 
- </div>
+        {% endif %}
+    </form>
+
+</div>
 {% endblock data_section %}
 

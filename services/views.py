@@ -1,13 +1,15 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
 
 
 # Create your views here.
 @login_required(login_url='login:login_user')
 def servicesLanding(request):
     page_name = "Services Dashboard"
-    return render(request, 'services/landing.html', {"page_name": page_name})
+    user = User.is_authenticated
+    return render(request, 'services/landing.html', {"page_name": page_name, "user": user})
 
 
 @login_required(login_url='login:login_user')
