@@ -16,7 +16,7 @@
         <tbody>
         {% for field in all_garages %}
         <tr>
-            <td> {{ field.garage_name }}</td>
+            <td> <a href="#" > {{ field.garage_name }} </a> </td>
             <td> {{ field.garage_location }}</td>
             <td> {{ field.garage_email }}</td>
             <td> {{ field.garage_telephone }}</td>
@@ -26,6 +26,7 @@
 
         </tbody>
     </table>
+
 </div>
 {% endblock data_section %}
 

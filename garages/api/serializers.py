@@ -5,6 +5,7 @@ class GaragesSerializer(serializers.ModelSerializer):
     class Meta:
         model = RegisterGarage
         fields = (
+            "id",
             "garage_name",
             "garage_location",
             "garage_email",
